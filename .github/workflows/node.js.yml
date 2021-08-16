@@ -31,5 +31,6 @@ jobs:
 
   tests:
     needs: build
+    runs-on: ubuntu-latest
     steps:
       - run: npm test
