@@ -13,4 +13,8 @@ app.post('/users', async (req, res) => {
     res.sendStatus(200)
 })
 
+app.get('/', async (req, res) => {
+    res.send("Hello")
+})
+
 export default app
