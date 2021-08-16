@@ -25,7 +25,7 @@ app.post('/users', async (req, res) => {
 app.get('/', async (req, res) => {
     try {
         const client = await pool.connect();
-        const result = await client.query('SELECT * FROM tasks');
+        const result = await client.query('SELECT description FROM tasks');
         const results = { 'results': (result) ? result.rows : null};
         res.send( results );
         client.release();
